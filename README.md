@@ -1,16 +1,22 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19893884&assignment_repo_type=AssignmentRepo)
-# MERN Stack Integration Assignment
+# NeBlog - MERN Stack Blogging Platform
 
-This assignment focuses on building a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application that demonstrates seamless integration between front-end and back-end components.
+NeBlog is a modern, full-stack blogging platform built with the MERN stack (MongoDB, Express, React, Node.js) and styled with Tailwind CSS. It features a beautiful, responsive UI and a robust backend for creating, editing, and viewing blog posts.
 
-## Assignment Overview
+## Features
 
-You will build a blog application with the following features:
-1. RESTful API with Express.js and MongoDB
-2. React front-end with component architecture
-3. Full CRUD functionality for blog posts
-4. User authentication and authorization
-5. Advanced features like image uploads and comments
+- User authentication (register, login, logout)
+- Create, edit, and delete blog posts with images
+- Add categories to posts
+- Comment on posts
+- User profile and personal blog management
+- Responsive, modern UI with gradient accents
+- Search functionality for posts
+- Secure API with JWT authentication
+
+## Tech Stack
+
+- **Frontend:** React, Vite, React Router, Axios, Tailwind CSS, React Icons
+- **Backend:** Node.js, Express, MongoDB, Mongoose, Multer (for image uploads), JWT, CORS
 
 ## Project Structure
 
@@ -20,19 +26,14 @@ mern-blog/
 │   ├── public/             # Static files
 │   ├── src/                # React source code
 │   │   ├── components/     # Reusable components
-│   │   ├── pages/          # Page components
-│   │   ├── hooks/          # Custom React hooks
-│   │   ├── services/       # API services
+│   │   ├── Pages/          # Page components
 │   │   ├── context/        # React context providers
 │   │   └── App.jsx         # Main application component
 │   └── package.json        # Client dependencies
 ├── server/                 # Express.js back-end
-│   ├── config/             # Configuration files
-│   ├── controllers/        # Route controllers
 │   ├── models/             # Mongoose models
 │   ├── routes/             # API routes
-│   ├── middleware/         # Custom middleware
-│   ├── utils/              # Utility functions
+│   ├── images/             # Uploaded images
 │   ├── server.js           # Main server file
 │   └── package.json        # Server dependencies
 └── README.md               # Project documentation
@@ -40,40 +41,72 @@ mern-blog/
 
 ## Getting Started
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week4-Assignment.md` file
-4. Complete the tasks outlined in the assignment
+### Prerequisites
+- Node.js (v18+ recommended)
+- MongoDB (local or Atlas)
 
-## Files Included
+### 1. Clone the repository
+```
+git clone <repo-url>
+cd blog-app
+```
 
-- `Week4-Assignment.md`: Detailed assignment instructions
-- Starter code for both client and server:
-  - Basic project structure
-  - Configuration files
-  - Sample models and components
+### 2. Install dependencies
+```
+cd client
+npm install
+cd ../server
+npm install
+```
 
-## Requirements
+### 3. Configure environment variables
+Create a `.env` file in the `server/` directory:
+```
+MONGO_URL=<your-mongodb-connection-string>
+PORT=5000
+JWT_SECRET=<your-secret>
+```
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git
+### 4. Start the backend
+```
+cd server
+npm run dev
+```
 
-## Submission
+### 5. Start the frontend
+```
+cd client
+npm run dev
+```
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+The frontend will run on [http://localhost:5173](http://localhost:5173) and the backend on [http://localhost:5000](http://localhost:5000).
 
-1. Complete both the client and server portions of the application
-2. Implement all required API endpoints
-3. Create the necessary React components and hooks
-4. Document your API and setup process in the README.md
-5. Include screenshots of your working application
+## Usage
+- Register a new account or login.
+- Create, edit, and delete your own blog posts.
+- Upload images to posts.
+- Add categories to organize your posts.
+- Comment on any post.
+- View your profile and your blogs.
+- Use the search bar to find posts by title.
 
-## Resources
+## UI/UX
+- Modern, clean, and responsive design
+- Gradient-accented navbar and footer
+- Rounded cards and buttons
+- Consistent color palette (cyan/blue/white)
+- Mobile-friendly navigation and menus
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [Mongoose Documentation](https://mongoosejs.com/docs/) 
+## Customization
+- Update categories in `CreatePost.jsx` as needed.
+- Tailwind CSS is used for all styling—customize in `tailwind.config.js`.
+
+## Screenshots
+![image](https://github.com/user-attachments/assets/212c2421-7023-47e0-8d47-75662794c922)
+![image](https://github.com/user-attachments/assets/3bc20f9f-fc4c-4fbc-9cfe-22a860e853fc)
+![image](https://github.com/user-attachments/assets/db4b72f8-4c66-4247-9ca3-6010105aadc5)
+
+
+---
+
+**Made with ❤️ using the MERN stack by Nebert.**
